@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Button,
   Grid,
@@ -72,6 +73,7 @@ const AddCourse = ({ type, open, handleClose, course }) => {
         ? dispatch(addCourse(inputs))
         : dispatch(updateCourse(inputs));
       handleClose();
+      setInputs({steps});      
     } catch (error) {
       console.log(error);
     }
